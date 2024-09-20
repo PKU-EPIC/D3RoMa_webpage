@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>D3RoMa</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/icon.png"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<style>
+  .video-container {
+    width: 30%; /* 每个容器宽度为页面宽度的32%，根据实际情况调整 */
+    display: inline-block; /* 使容器并列排列 */
+    margin: 1%; /* 添加外边距 */
+    vertical-align: top;
+  }
+
+  video {
+    width: 100%; /* 视频宽度填满容器 */
+    display: block; /* 确保视频占满整个容器宽度 */
+  }
+
+  .description {
+    text-align: center; /* 文字居中对齐 */
+  }
+
+  .text-image-container {
+    display: flex; /* 使用弹性盒模型布局 */
+    align-items: flex-start; /* 上端对齐 */
+    justify-content: center;
+}
+
+ul {
+  text-align: left; /* 确保文本左对齐 */
+  list-style-position: inside; /* 列表标记与文本对齐 */
+  font-size: 16px;
+  list-style-type: circle; /* 使用圆形作为项目符号 */
+
+}
+
+
+</style>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">D3RoMa: Disparity Diffusion-based Depth Sensing for Material-Agnostic Robotic Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <!-- <span class="author-block"><a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiazhao Zhang</a><sup>1,2,*</sup>,</span> -->
+              <span class="author-block">
+                <a href="https://songlin.github.io/">Songlin Wei</a><sup>1,4,</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://geng-haoran.github.io/">Haoran Geng</a><sup>2,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://cs.stanford.edu/~congyue/">Congyue Deng</a><sup>1,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://jychen18.github.io/">Jiayi Chen</a><sup>1,4,*</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Wenbo Cui<sup>5,6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Chengyang Zhao<sup>1,4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Xiaomeng Fang<sup>6</sup>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://hughw19.github.io/">He Wang</a><sup>1,4,6</sup>
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+              <span class="author-block"><sup>1</sup>
+                Peking University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>2</sup>University of California, Berkeley&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>3</sup>Stanford University
+              </span>
+              <span class="author-block" style="display: block;">
+                <sup>4</sup>Galbot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>5</sup>Univsersity of Chinese Academy of Sciences&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>6</sup>Beijing Academy of Artificial Intelligence
+              </span>
+  
+            </div>
+
+
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://openreview.net/pdf?id=7E3JAys1xO" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://youtu.be/ZMPeBjiEdEo" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+                </span>
+
+                <!--Github link -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (soon)</span>
+                </a>
+                </span>
+
+                <!-- <span class="link-block"></span>
+                  <a href="#" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-file-download"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.15852" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+  
+            <div class="text">
+              8th Conference on Robot Learning (CoRL 2024), Munich, Germany.
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--<section class="hero is-small">
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+      <h2>
+      <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> 
+      <div class="text-image-container title is-3">
+        <div>
+          <img src="static/images/highlight_logo.png" alt="示例图片" width="50">
+      </div>
+        <div class="text">
+            <p>Highlights</p>
+        </div>
+    </div>
+  </h2>
+
+
+
+      <p> <b>Real-world demos by following simple instructions, such as walking to a single landmark.</b></p>
+      <ul>
+        <li><b>NaVid is the first video-based Vision-Language Model (VLM) for the task of vision-and-language navigation (VLN).</b></li>
+        <li><b>NaVid navigates in a human-like manner, requiring solely an on-the-fly video stream from a monocular camera as input, without the need for maps, odometers, or depth inputs.</b></li>
+        <li><b>NaVid incorporates 510K VLN video sequences from simulation environments and 763K real-world caption samples to achieve cross-scene generalization.</b></li>
+        <li><b>NaVid is co-trained with real-world caption data (763k) and simulated VLN data (510k). The VLN capability is obtained by leveraging simulation environments, while real-world understanding is gained through real-world caption data.</b></li> 
+        <li><b>NaVid achieves state-of-the-art (SOTA) performance in both simulated and real-world environments, and exhibits strong generalizability on unseen scenarios.</b></li>
+      </ul>
+
+
+    </div>
+
+  </div>
+  
+</section> -->
+
+
+
+
+
+
+
+<!-- Teaser video 1 -->
+<section class="hero is-small">
+
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+
+      <h2 class="title is-5">Depth Estimation: For transparent and reflective objects</h2>
+      <p> <b>In these demos, we compare the depth predicted by D3RoMa with raw sensor depths captured by RealSense D415/D435.</b></p>
+
+      <div id="results-carousel-teaser1" class="carousel results-carousel">
+
+        <div class="item item-video">
+          <video poster="" id="video1" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/depth_restore/1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video">
+          <video poster="" id="video1" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/depth_restore/2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video">
+          <video poster="" id="video2" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/depth_restore/3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <!-- <div class="item item-video"></div>
+          <video poster="" id="video3" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/depth_restore/4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video"></div>
+          <video poster="" id="video4" autoplay playsinline controls muted loop height="100%">
+            <source src="static/videos/depth_restore/5.mp4"
+            type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video 1 -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+                 Depth sensing is an important problem for 3D vision-based robotics.
+Yet, a real-world active stereo or ToF depth camera often produces noisy and in-
+complete depth which bottlenecks robot performances. In this work, we propose
+D3RoMa, a learning-based depth estimation framework on stereo image pairs that
+predicts clean and accurate depth in diverse indoor scenes, even in the most challenging scenarios 
+with translucent or specular surfaces where classical depth sensing completely fails. 
+Key to our method is that we unify depth estimation and restoration into an image-to-image translation problem by predicting the disparity map with a denoising diffusion probabilistic model. At inference time, we
+further incorporated a left-right consistency constraint as classifier guidance to
+the diffusion process. Our framework combines recently advanced learning-based
+approaches and geometric constraints from traditional stereo vision. For model
+training, we create a large scene-level synthetic dataset with diverse transparent
+and specular objects to compensate for existing tabletop datasets. The trained
+model can be directly applied to real-world in-the-wild scenes and achieve state-of-the-art performance in multiple public depth estimation benchmarks. 
+Further experiments in real environments show that accurate depth prediction significantly
+improves robotic manipulation in various scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- YouTube Video-->
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Supplementary Video</h2>
+            <div class="publication-video">
+              <!---TODO Dhruv: put video link here-->
+              <!-- <iframe src="https://youtu.be/ZMPeBjiEdEo?si=o-PdPk1kQLTyuoLL" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+              <!-- <iframesrc="https://www.youtube.com/embed/ZMPeBjiEdEo?si=Jttt7J_tVZnz5HnB" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe> -->
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMPeBjiEdEo?si=Jttt7J_tVZnz5HnB&amp;start=31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Method Overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Method Overview</h2>
+            <img src="static/images/method.png" alt="NaVid" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <b>Disparity diffusion with stereo-geometry guidance.</b>Our disparity diffusion-based depth
+                sensing framework takes the raw disparity map ˜D and the left-right stereo image pair Il, Ir as input.
+                With the geometry prior from the stereo matching between Il and Ir as guidance for the reverse
+                sampling, our diffusion model can gradually perform the denoising process conditioned on ˜D to
+                predict the restored disparity map x<sub>0</sub>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">In the Wild Depth Predictions</h2>
+            <img src="static/images/in-the-wild-new.png" alt="In the wild" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <b>Generalizability of D3RoMa in the real world. Our method robustly predicts transparent
+                  (bottles) and specular (basin and cups) object depths in tabletop environments and beyond. * RGB
+                  and depth images are not aligned for the D435 camera for better visualization.</b>
+              </p>
+              <p class="has-text-justified">
+                <!-- <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b> -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small"></section>
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Generalization comparisons with State-of-the-art monocular depth estimation methods.</h2>
+            <img src="static/images/mde.png" alt="In the wild" class="center-image blend-img-background">
+            <div class="level-set has-text-justified">
+              <p class="has-text-justified">
+                <b>Generalization comparisons with State-of-the-art monocular depth estimation methods.
+                 </b> All the results except ours are taken from their official web demo. Different methods used different
+                 color maps. We found that most monocular methods produce inferior quality depth even without
+                  considering the absolute scale.
+              </p>
+              <p class="has-text-justified">
+                <!-- <b>We initialize the encoders and Vicuna-7B using pre-trained weights, and our model requires only one epoch for the training process.</b> -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+        wei2024droma,
+        title={D3RoMa: Disparity Diffusion-based Depth Sensing for Material-Agnostic Robotic Manipulation},
+        author={Songlin Wei and Haoran Geng and Jiayi Chen and Congyue Deng and Cui Wenbo and Chengyang Zhao and Xiaomeng Fang and Leonidas Guibas and He Wang},
+        booktitle={8th Annual Conference on Robot Learning},
+        year={2024},
+        url={https://openreview.net/forum?id=7E3JAys1xO}
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
